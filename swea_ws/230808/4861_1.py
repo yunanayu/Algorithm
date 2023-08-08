@@ -19,12 +19,12 @@ def text_col(text, N):
 
 
 def brute(text, N, M):
+    # reverse_text = text_reverse(text, N)
+    m = round(M/2)
     for n in range(N):
-        for j in range(N):
-            patt = text[n][j:j+M]
-            if patt:
-                if patt in text_reverse(text, N)[n]:
-                    return text[n]
+        for j in range(N-M+1):
+            if text[n][j:j+M] == text[n][j+M-1:j+M-m]:
+                return text[n]
         # if text[n][:M//2] == text[n][:(M//2)-1:-1]:
         #     return text[n]
 
@@ -46,3 +46,14 @@ for tc in range(1, TC+1):
 #             reverse_text = reverse_text + text[r][c]
 #         reverse_list.append(reverse_text)
 #     return reverse_list
+
+
+# TC = int(input())
+# for tc in range(1, TC+1):
+#     N, M = map(int, input().split())    # N =  전체 텍스트의  M = 찾을 패턴의 길이
+#     text = [(input()) for _ in range(N)]
+#
+#     for n in range(N):
+# #         for j in range(N-M+1):
+# #             patt = text[n][j:j+M]
+# #             if patt in text_reverse(text, N)[n][]:
