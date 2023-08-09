@@ -1,4 +1,6 @@
 # 스도쿠 검증
+
+
 # def search(data_list):
 #     for i in data_list:
 #         if i != 1:
@@ -49,5 +51,5 @@ for tc in range(1, TC+1):
     else:
         print(f'#{tc}', 0)
 
-        for r in range(0, 10, 3):
-            for c in range(r, )
+        for 1 in range(0, 7, 3):
+            for c in range(r\, )
