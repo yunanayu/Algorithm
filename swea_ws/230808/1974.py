@@ -40,16 +40,24 @@ for tc in range(1, TC+1):
         new_arr1 = []
         for c in range(9):
             new_arr1.append(arr[r][c])
-    for r in range(9):
-        new_arr2 = []
-        for c in range(9):
-            new_arr2.append(arr[c][r])
-    # for r in range(0,10,3):
-    #     for c in range(r, )
-    if search(new_arr1) and search(new_arr2):
-        print(f'#{tc}', 1)
-    else:
-        print(f'#{tc}', 0)
+        if search(new_arr1):
+            continue
+        else:
 
-        for 1 in range(0, 7, 3):
-            for c in range(r\, )
+    # for r in range(9):
+    #     new_arr2 = []
+    #     for c in range(9):
+    #         new_arr2.append(arr[c][r])
+    # for r in range(0, 7, 3):
+    #     new_arr3 = []
+    #     for c in range(0, 7, 3):
+    #         for i in range(3):
+    #             new_arr3.append(arr[r + i][c + i])
+    # if search(new_arr1) and search(new_arr2): # and search((new_arr3)):
+    #     print(f'#{tc}', 1)
+    # else:
+    #     print(f'#{tc}', 0)
+    #
+
+
+
