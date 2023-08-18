@@ -27,4 +27,5 @@ for i in range(E):
     adj_l[v1].append(v2)
     adj_l[v2].append(v1)    # 방향이 없는 경우
 # 여기까지 인접리스트-----------------------------------
-bfs(1,7)
+# bfs(1,7)
+print(adj_l)

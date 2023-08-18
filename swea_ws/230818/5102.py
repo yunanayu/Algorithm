@@ -6,10 +6,11 @@ def bfs(S, G):
     visited[S] = 1
     while Q:
         v = Q.pop(0)
-        if not visited[v]:
-            visited[v] = 1
-            for w in arr[v]:
-                visited[w]
+        for w in arr[v]:
+            if not visited[w] == 0:
+                Q.append(w)
+                visited[w] = visited[v] + 1
+    return visited[G]
 
 
 TC = int(input())
@@ -24,4 +25,4 @@ for tc in range(1, TC+1):
         arr[v1].append(v2)
         arr[v2].append(v1)
 
-    print(arr)
+    print(bfs(S, G))
