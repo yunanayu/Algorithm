@@ -33,6 +33,6 @@ for i in range(E):
     v1, v2 = arr[i*2], arr[i*2+1]
     adj_m[v1][v2] = 1
     adj_m[v2][v1] = 1
-print(adj_m)
+# print(adj_m)
 
-# dfs(1, V, adj_m)
+dfs(1, V, adj_m)
