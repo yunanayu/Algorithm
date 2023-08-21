@@ -15,3 +15,6 @@ def post_order(root):
     if len(G[root]) == 2:
         post_order(G[root][1])
     print(root)
+
+
+post_order(1)
