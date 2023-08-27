@@ -6,7 +6,11 @@ for tc in range(1, 11):
     ST = []
     dct = {'(':')', ')':'(', '[':']', ']':'[', '{':'}', '}':'{', '<':'>', '>':'<'}
     for a in arr:
-        if not ST or dct[ST[-1]] !=
+        if not ST or dct[ST[-1]] != a:
             ST.append(a)
         else:
             ST.pop()
+    if ST:
+        print(f'#{tc}', '0')
+    else:
+        print(f'#{tc}', '1')
