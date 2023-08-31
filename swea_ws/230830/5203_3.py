@@ -45,6 +45,6 @@ for tc in range(1, TC+1):
                 break
             # (f'#{tc} {b(counts_A,counts_B)}')
 
-    es
+    e
     # print(counts_A)
     # print(counts_B)

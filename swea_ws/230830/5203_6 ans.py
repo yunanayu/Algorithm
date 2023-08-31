@@ -1,31 +1,13 @@
-# 베이비진이면  True / 아니면 False
+# 베이비진
+import sys
+sys.stdin = open('5203.txt','r')
+
 def isBabygin(cnts):
     for i in range(10):
         if cnts[i] >= 3:
             return True
         if cnts[i] >= 1 and cnts[i+1]>=1 and cnts[i+2]>=1:  # out of range 방지를 위히ㅐ 배열 12개 만듬 or 반복문 두개로 쪼개기
             return True
-    return False
-
-
-def isBabygin2(cnts):
-    tri = 0
-    run = 0
-    i = 0
-    while i < 10:
-        if cnts[i] >= 3:
-            cnts[i] -= 3
-            tri += 1
-            continue
-        if cnts[i] >= 1 and cnts[i+1]>=1 and cnts[i+2]>=1:
-            cnts[i] -= 1
-            cnts[i+1] -= 1
-            cnts[i+2] -= 1
-            run += 1
-            continue
-        i += 1
-    if tri + run == 2:
-        return True
     return False
 
 
@@ -51,4 +33,4 @@ for tc in range(1, TC+1):
             winner = 2
             break
 
-print(winner)
+    print(f'#{tc} {winner}')
