@@ -5,6 +5,8 @@ sys.stdin = open('input1.txt','r')
 
 def solve(k, cnt, remain):
     global minC
+    if minC < cnt:
+        return
     if k>=M[0] :  # k 가 종점이면
         if minC > cnt:
             minC = cnt
@@ -19,7 +21,7 @@ def solve(k, cnt, remain):
 
 T = int(input())
 for tc in range(1, T+1):
-    N, *M = map(int, input().split())
+    M = list(map(int, input().split()))
     minC = M[0]
     solve(1, 0, M[1])
-    print(f'{tc}', minC)
+    print(f'#{tc}', minC)
